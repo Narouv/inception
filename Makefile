@@ -3,8 +3,8 @@ COMPOSE=./srcs/docker-compose.yml
 all: up
 
 up:
-	mkdir ~/data
-	mkdir ~/data/mariadb ~/data/wordpress
+	@-mkdir ~/data
+	@-mkdir ~/data/mariadb ~/data/wordpress
 	docker-compose -f $(COMPOSE) up --build -d
 
 down:
