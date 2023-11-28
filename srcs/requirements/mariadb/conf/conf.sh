@@ -136,13 +136,13 @@ collation-server      = utf8mb4_general_ci
 [mariadb-10.3]
 ' > /etc/mysql/mariadb.conf.d/50-server.cnf
 
-echo "CREATE DATABASE IF NOT EXISTS $db1_name ;" > db1.sql
-echo "CREATE USER IF NOT EXISTS '$db1_user'@'%' IDENTIFIED BY '$db1_pwd' ;" >> db1.sql
-echo "GRANT ALL PRIVILEGES ON $db1_name.* TO '$db1_user'@'%' ;" >> db1.sql
+echo "CREATE DATABASE IF NOT EXISTS $db1_name ;" > dbconf.sql
+echo "CREATE USER IF NOT EXISTS '$db1_user'@'%' IDENTIFIED BY '$db1_pwd' ;" >> dbconf.sql
+echo "GRANT ALL PRIVILEGES ON $db1_name.* TO '$db1_user'@'%' ;" >> dbconf.sql
 
 service mariadb start
 
-mariadb < db1.sql
+mariadb < dbconf.sql
 
 service mariadb stop
 

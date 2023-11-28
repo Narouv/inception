@@ -6,4 +6,4 @@ COPY ./conf/conf.sh /
 
 RUN chmod +x conf.sh
 
-CMD [ "/conf.sh" ]
+CMD [ "./conf.sh" ]
