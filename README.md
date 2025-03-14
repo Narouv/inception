@@ -11,8 +11,8 @@ This project is a System Administration related exercise.
 ## Installation
 ```sh
 # Clone the repository
-git clone https://github.com/Narouv/FdF.git
-cd FdF
+git clone https://github.com/Narouv/Inception.git
+cd Inception
 
 # Build the project
 make
